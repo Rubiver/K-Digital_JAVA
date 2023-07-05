@@ -13,6 +13,5 @@ public class Quiz10 {
             hap += i;
         }
         System.out.println("1 ~ "+ num +"까지의 합은 "+ hap +"입니다.");
-
     }
 }

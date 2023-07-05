@@ -8,7 +8,6 @@ public class Exam07 {
             {
                System.out.print(" ");
             }
-            System.out.print("*");
             System.out.println("");
         }
     }
