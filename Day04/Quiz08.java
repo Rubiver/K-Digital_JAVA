@@ -33,6 +33,7 @@ public class Quiz08 {
                     while(true)
                     {
                         comAns = (int)(Math.random()*(comAimax-comAimin+1) + comAimin);
+                        System.out.println("ComAns : "+comAns+ " min : "+comAimin+" max :"+comAimax);
                         System.out.print("Input Number : ");
                         num = Integer.parseInt(sc.nextLine());
                         if(num == com)
@@ -43,7 +44,6 @@ public class Quiz08 {
                             {
                                 rank = score;
                             }
-                            score = 0;
                             break;
                         }
                         else if(num > com)
@@ -65,7 +65,6 @@ public class Quiz08 {
                             {
                                 rank = score;
                             }
-                            comScore = 0;
                             break;
                         }
                         else if(comAns > com)
@@ -81,6 +80,10 @@ public class Quiz08 {
                             comScore++;
                         }
                     }
+                    comAimin = 1;
+                    comAimax = 100;
+                    comScore = 0;
+                    score = 0;
                     break;
                 case 2:
                     System.out.println("현재 1위는 "+rank+"번 만에 맞췄습니다.");
