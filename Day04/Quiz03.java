@@ -31,6 +31,7 @@ public class Quiz03 {
                 if((money-1200)<0)
                 {
                     System.out.println("현재 잔액이 부족합니다.");
+                    System.out.println("현재 잔액 : "+money);
                     continue;
                 }
                 else
@@ -45,6 +46,7 @@ public class Quiz03 {
                 if((money-1000)<0)
                 {
                     System.out.println("현재 잔액이 부족합니다.");
+                    System.out.println("현재 잔액 : "+money);
                     continue;
                 }
                 else
@@ -59,6 +61,7 @@ public class Quiz03 {
                 if((money-3000)<0)
                 {
                     System.out.println("현재 잔액이 부족합니다.");
+                    System.out.println("현재 잔액 : "+money);
                     continue;
                 }
                 else
@@ -76,6 +79,7 @@ public class Quiz03 {
                 System.out.println("보유한 커피 : " +cof);
                 System.out.println("보유한 주스 : " +juice);
             }
+            //System.out.println("컨티뉴 테스트");
         }
     }
 }
