@@ -71,7 +71,9 @@ public class Quiz06 {
                 System.out.println("유저 : 보, 컴퓨터 : 보");
                 System.out.println("무승부");
             }
-            /*else if(sel == (int)com)
+            /*
+            //비긴 경우를 한번에 정리
+            else if(sel == (int)com)
             {
                 if(sel == 1)
                 {
