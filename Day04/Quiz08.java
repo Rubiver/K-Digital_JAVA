@@ -85,7 +85,7 @@ public class Quiz08 {
                 case 2:
                     System.out.println("현재 1위는 "+rank+"번 만에 맞췄습니다.");
                     System.out.println("======= 전적 =======");
-                    System.out.println("총 전적 : "+playerWin+aiWin);
+                    System.out.println("총 전적 : "+(playerWin+aiWin)+"전");
                     System.out.println("플레이어 : "+playerWin+"승 "+aiWin+"패");
                     System.out.println("컴퓨터 : "+aiWin+"승 "+playerWin+"패");
                     break;
