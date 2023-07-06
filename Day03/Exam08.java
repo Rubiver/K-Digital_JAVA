@@ -1,24 +1,13 @@
 package Day03;
 public class Exam08 {
     public static void main(String[] args) {
-        int i;
-        abc : while(true)
+        for(int i=1; i<=10; i++)
         {
-            for(i=1; i<=10; i++)
+            if(i == 5)
             {
-                if( i==2 || i == 5)
-                {
-                    continue;
-                }
-                System.out.println("i = " + i);
-                if(i==8)
-                {
-                    break abc; //Label Break 만약 중첩 반복문에서 탈출할 때 반복문 앞에 라벨을 달아 주고 break에 해당 라벨을 사용하여 탈출할 수 있음.
-                }
+                continue; //continue 이후의 코드를 무시하고 자신이 속한 반복문의 마지막으로 이동. (반복문 스킵, 탈출은 하지 않음.)
             }
+            System.out.println(i);
         }
-
-
-
     }
 }
