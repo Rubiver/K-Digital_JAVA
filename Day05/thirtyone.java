@@ -7,16 +7,13 @@ public class thirtyone {
         Scanner sc = new Scanner(System.in);
         int sel = 0;
         int ansState = 0;
-        char ansChar;
         int comRepeat = 0;
         int userRepeat = 0;
         int userAns = 0;
         int comAns = 0;
+        int playerWin = 0;
+        int aiWin = 0;
 
-
-        //test
-        String test = "3 4 5 6";
-        System.out.println(test.replace(" ", "").length());
         while (true)
         {
             System.out.println("=== 31 Game ===");
@@ -49,6 +46,7 @@ public class thirtyone {
                         if(userAns == 31)
                         {
                             System.out.println("게임 종료. 유저 패배 ");
+                            ++aiWin;
                             break;
                         }
 
@@ -65,11 +63,15 @@ public class thirtyone {
                         if(comAns == 31)
                         {
                             System.out.println("게임 종료. 컴퓨터 패배 ");
+                            ++playerWin;
                             break;
                         }
                     }
                 case 2:
-                    System.out.println("누가 이겼을까나~");
+                    System.out.println("======= 전적 =======");
+                    System.out.println("총 전적 : "+(playerWin+aiWin)+"전");
+                    System.out.println("플레이어 : "+playerWin+"승 "+aiWin+"패");
+                    System.out.println("컴퓨터 : "+aiWin+"승 "+playerWin+"패");
                     break;
                 case 3:
                     System.out.println("게임을 종료합니다.");

@@ -14,8 +14,6 @@ public class Exam02 {
         int[] arr2 = new int[10];
         int[] arr3 = new int[10];
 
-        int[] dimension = new int[3];
-
         /*
         System.out.print("첫 번째 값 입력 : ");
         x = Integer.parseInt(sc.nextLine());
@@ -60,11 +58,6 @@ public class Exam02 {
             System.out.println("y의 "+(i+1)+" 번째 입력값 : "+arr2[i]);
             System.out.println("z의 "+(i+1)+" 번째 입력값 : "+arr3[i]);
             System.out.println("");
-        }
-
-        for(int i=0; i<dimension.length; i++)
-        {
-
         }
     }
 }
