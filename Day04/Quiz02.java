@@ -25,24 +25,40 @@ public class Quiz02 {
             }
             else if(select == 1)
             {
-                System.out.print("얼마를 입글하시겠습니까? > ");
-                money += Integer.parseInt(sc.nextLine());
-                System.out.println("현재 잔액은 "+money+" 원 입니다.");
+                while(true) {
+                    try {
+                        System.out.print("얼마를 입글하시겠습니까? > ");
+                        money += Integer.parseInt(sc.nextLine());
+                        System.out.println("현재 잔액은 " + money + " 원 입니다.");
+                        break;
+                    } catch (Exception e) {
+                        System.out.println("숫자만 입력주해주세요.");
+                    }
+                }
             }
             else if(select == 2)
             {
-                System.out.print("얼마를 출금하시겠습니까? >");
-                temp = Integer.parseInt(sc.nextLine());
-                if((money-temp)<0)
+                while(true)
                 {
-                    System.out.println("잔액이 부족합니다.");
-                }
-                else
-                {
-                    money -= temp;
-                    System.out.println(temp+"원 출금하여 "+money+" 원 남았습니다.");
-                    temp = 0;
-                }
+                    try{
+                        System.out.print("얼마를 출금하시겠습니까? >");
+                        temp = Integer.parseInt(sc.nextLine());
+                        if((money-temp)<0)
+                        {
+                            System.out.println("잔액이 부족합니다.");
+                        }
+                        else
+                        {
+                            money -= temp;
+                            System.out.println(temp+"원 출금하여 "+money+" 원 남았습니다.");
+                            temp = 0;
+                            break;
+                        }
+                    }catch (Exception e)
+                    {
+                        System.out.println("숫자만 입력해주세요.");
+                    }
+                }//try-catch구문으로 예외처리하는 방법
             }
             else if(select == 3)
             {

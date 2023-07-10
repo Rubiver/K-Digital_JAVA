@@ -3,6 +3,19 @@ package Day04;
 import java.util.Scanner;
 
 public class Quiz01 {
+
+    public static int validNum(String str)
+    {
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            try {
+                System.out.print(str);
+                return Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                System.out.println("숫자 입력 해야함.");
+            }
+        }
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num1 = 0;
@@ -73,10 +86,27 @@ public class Quiz01 {
                 continue;
             }
             //여기서 아래의 코드를 else로 묶어서 하나의 제어문으로 제어가능.
-            System.out.print("숫자 1 입력 : ");
-            num1 = Integer.parseInt(sc.nextLine());
-            System.out.print("숫자 2 입력 : ");
-            num2 = Integer.parseInt(sc.nextLine());
+            /*while (true) {
+                try {
+                    System.out.print("숫자 1 입력 : ");
+                    num1 = Integer.parseInt(sc.nextLine());
+                    break;
+                } catch (Exception e) {
+                    System.out.println("숫자 입력 해야함.");
+                }
+            }*/
+            num1 = validNum("숫자 1 입력 :"); //해당 기능을 try-catch를 사용하는 메서드로 만듬.
+            while (true) {
+                try {
+                    System.out.print("숫자 2 입력 : ");
+                    num2 = Integer.parseInt(sc.nextLine());
+                    break;
+                } catch (Exception e) {
+                    System.out.println("숫자 입력 해야함.");
+                }
+            } //사용자의 편의를 위한 코딩.
+
+
             if(ops.equals("+"))
             {
                 result = num1 + num2;
