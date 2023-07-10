@@ -96,7 +96,7 @@ public class Quiz01 {
                 }
             }*/
             num1 = validNum("숫자 1 입력 :"); //해당 기능을 try-catch를 사용하는 메서드로 만듬.
-            while (true) {
+            /*while (true) {
                 try {
                     System.out.print("숫자 2 입력 : ");
                     num2 = Integer.parseInt(sc.nextLine());
@@ -104,8 +104,8 @@ public class Quiz01 {
                 } catch (Exception e) {
                     System.out.println("숫자 입력 해야함.");
                 }
-            } //사용자의 편의를 위한 코딩.
-
+            }*/ //사용자의 편의를 위한 코딩.
+            num2 = validNum("숫자 2 입력 :");
 
             if(ops.equals("+"))
             {
