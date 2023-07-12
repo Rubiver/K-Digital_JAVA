@@ -24,6 +24,9 @@ public class Quiz02 {
             String genre = "장르"+(i+1);
             dir = new Director(directors[i],filmo[i]);
             mv[i] = new Movie(id,title,genre,cast,dir);
+            mv[0].getCast()[0] = ""; //자료형을 잘 생각하면 이런 식으로 작성가능.
+            //mv[i] = new Movie(id,title,genre,new String[]{"1","2"},dir); 메서드에 new String[]처럼 배열을 넘길 수 있음.
+            //mv[i] = new Movie(id,title,genre,new String[]{"1","2"},new Director("a","as"));
         }
         System.out.println("ID\t\t영화\t\t장르\t\t배우\t\t\t감독\t\t영화");
         for(int i=0; i<mv.length; i++)

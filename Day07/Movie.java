@@ -20,6 +20,14 @@ public class Movie {
         this.id = id;
     }
 
+    public String[] getCast() {
+        return cast;
+    }
+
+    public void setCast(String[] cast) {
+        this.cast = cast;
+    }
+
     public void setGenre(String genre) {
         this.genre = genre;
     }

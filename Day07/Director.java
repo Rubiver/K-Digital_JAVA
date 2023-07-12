@@ -10,6 +10,7 @@ public class Director
         this.name = name;
         this.directedMovie = movie;
     }
+    public Director(){}
 
     public void setName(String name) {
         this.name = name;
