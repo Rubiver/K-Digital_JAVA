@@ -7,5 +7,6 @@ public class Day08 {
         //JFugee : 코드로 작곡
         //JavaMail : 자바로 메일 다루기
         //JavaCV : 자바에서 Computer vision 사용
+        //JNA : 재밌음
     }
 }
