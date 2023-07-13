@@ -1,6 +1,8 @@
 package Day09.view;
 
 import Day09.dto.Gold;
+import Day09.dto.Grade;
+import Day09.dto.Ruby;
 import Day09.dto.Silver;
 import Day09.dao.DAO;
 
@@ -42,20 +44,20 @@ public class Main {
                     manager.addMember(new Silver(1003, "june", 3000));
                     manager.addMember(new Gold(1004, "adele", 4000)); //DAO의 addMember 메서드를 사용.
                     manager.addMember(new Gold(1005, "hank", 5000));
+                    manager.addMember(new Ruby(1006, "meme", 1000));
                     System.out.println("입력 완료!");
                     break;
                 case 2:
-                    Silver[] silverMember = manager.getSilverMember();
-                    Gold[] goldMember = manager.getGoldMember();
+                    Grade[] member = manager.getMember();
                     System.out.println("ID\t\tName\tPoint\tBonus");
 
-                    for(int i=0; i < manager.getSilverIndex(); i++) //배열에 들어있는 값은 silverMember.length로는 다 알지 못하고 index로 알 수 있음.
+                    for(int i=0; i < manager.getIndex(); i++) //배열에 들어있는 값은 silverMember.length로는 다 알지 못하고 index로 알 수 있음.
                     {
-                        System.out.println(silverMember[i].getId()+"\t"+silverMember[i].getName()+"\t"+silverMember[i].getPoint()+"\t"+silverMember[i].getBonus());
-                    }
-                    for(int i=0; i<manager.getGoldIndex(); i++)
-                    {
-                        System.out.println(goldMember[i].getId()+"\t"+goldMember[i].getName()+"\t"+goldMember[i].getPoint()+"\t"+goldMember[i].getBonus());
+                        System.out.println(member[i].getId()+"\t"
+                                +member[i].getName()+"\t"
+                                +member[i].getPoint()+"\t"
+                                +member[i].getBonus());
+                        //instanceOf : 해당 클래스의 자료형을 확인할 때 사용.
                     }
                     break;
                 case 3:
