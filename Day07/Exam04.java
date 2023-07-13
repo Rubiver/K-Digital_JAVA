@@ -1,4 +1,5 @@
 package Day07;
+
 public class Exam04 {
     public static void showStudent(int id, String name, int kor, int eng, int mat)
     {

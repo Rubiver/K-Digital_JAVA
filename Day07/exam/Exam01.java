@@ -1,4 +1,6 @@
-package Day07;
+package Day07.exam;
+
+import Day07.beans.TV;
 
 public class Exam01 {
     public static void main(String[] args) {

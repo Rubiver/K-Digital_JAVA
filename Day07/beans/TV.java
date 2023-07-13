@@ -1,12 +1,12 @@
-package Day07;
+package Day07.beans;
 public class TV{
     private int channel;
     private int volume;
     //멤버변수 channel과 맴버메서드의 매개변수 channel은 저장장소가 서로 다음.
     //멤버변수는 생성할때부터 heap메모리의 tv 인스턴스 안에 생성되는 것이고,
     //매개변수 channel은 stack 메모리에 생성된다.
-    String brand;
-    void powerOn(){}
+    public String brand;
+    public void powerOn(){}  //exam01에서 사용하는 메서드에 public 접근제한자를 부여하여 사용할 수 있게함.
     void powerOff(){}
     public TV getThis()
     {
