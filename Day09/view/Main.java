@@ -6,6 +6,7 @@ import Day09.dto.Ruby;
 import Day09.dto.Silver;
 import Day09.dao.DAO;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -48,16 +49,33 @@ public class Main {
                     System.out.println("입력 완료!");
                     break;
                 case 2:
-                    Grade[] member = manager.getMember();
+                    List<Grade> mems = manager.getMems();
                     System.out.println("ID\t\tName\tPoint\tBonus");
-
+                    /*DAO에 많은 메서드 콜이 발생.
                     for(int i=0; i < manager.getIndex(); i++) //배열에 들어있는 값은 silverMember.length로는 다 알지 못하고 index로 알 수 있음.
                     {
-                        System.out.println(member[i].getId()+"\t"
-                                +member[i].getName()+"\t"
-                                +member[i].getPoint()+"\t"
-                                +member[i].getBonus());
+                        //System.out.println(manager.getMember(i).);
+                        System.out.println(manager.getMember(i).getId()+"\t"
+                                +manager.getMember(i).getName()+"\t"
+                                +manager.getMember(i).getPoint()+"\t"
+                                +manager.getMember(i).getBonus());
                         //instanceOf : 해당 클래스의 자료형을 확인할 때 사용.
+                    }*/
+                    /*for(int i=0; i < mems.size(); i++) //배열에 들어있는 값은 silverMember.length로는 다 알지 못하고 index로 알 수 있음.
+                    {
+                        System.out.println(mems.get(i).getId()+"\t"
+                                +mems.get(i).getName()+"\t"
+                                +mems.get(i).getPoint()+"\t"
+                                +mems.get(i).getBonus());
+                        //instanceOf : 해당 클래스의 자료형을 확인할 때 사용.
+                    }*/
+                    //System.out.println(mems);
+                    for (Grade i :mems) {
+                        System.out.println(i);
+                        /*System.out.println(i.getId()+"\t"
+                                +i.getName()+"\t"
+                                +i.getPoint()+"\t"+
+                                i.getBonus());*/
                     }
                     break;
                 case 3:

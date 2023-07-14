@@ -14,6 +14,7 @@ public class Gold extends Grade{
                  //Grade의 생성자는 parameter가 3개가 존재하기 때문에 오류가 발생함.
                  //Grade 클래스에서 default constructor를 명시해주면 오류가 사라짐.
     }*/
+
     public Gold (int id, String name, int point)
     {
         super(id, name, point);
@@ -21,6 +22,7 @@ public class Gold extends Grade{
     public double getBonus() {
         return this.getPoint()*0.03; //부모클래스인 Grade클래스의 getBonus 메서드를 "무효화"하고 재정의하여 사용.
     }
+    public Gold(){}
     //골드에 있는 field, getter, setter를 Grade 클래스에 옮겨 적음.
 
     //공툥요소 : id, name, point, get&set, contructor

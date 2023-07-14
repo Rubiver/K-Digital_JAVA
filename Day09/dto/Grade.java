@@ -1,6 +1,7 @@
 package Day09.dto;
 
-public class Grade {
+//추상 클래스 : 인스턴스 생성 목적이 아닌 기능 구현을 위한 설계 목적으로 제작되는 설계도.
+public abstract class Grade {
     private int id;
     private String name;
     private int point;
@@ -9,6 +10,7 @@ public class Grade {
         this.name = name;
         this.point = point;
     }
+    public Grade(){}
     //생성자는 상속 대상이 아님
     public void setName(String name) {
         this.name = name;
@@ -32,9 +34,10 @@ public class Grade {
     public int getPoint() {
         return point;
     }
-    public double getBonus()
+    abstract public double getBonus(); //기능의 형태만(설계목적)을 구현하기 위해서 추상메서드로 만듬. 이때, abstract 키워드를 붙혀주어야함.
+    public String toString() //Object 클래스에 있는 toString 메서드 오버라이드
     {
-        return this.point * 0.01;
+        return getId()+"\t"+getName()+"\t"+getPoint()+"\t"+getBonus();
     }
 
 }
