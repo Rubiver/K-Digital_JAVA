@@ -4,12 +4,20 @@ import day10.dao.DAO;
 import day10.dto.Movie;
 
 import java.awt.font.ImageGraphicAttribute;
-import java.util.List;
-import java.util.Scanner;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
+        long currentTime = System.currentTimeMillis();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MM dd");
+        String result = sdf.format(currentTime);
+        Date date = sdf.parse(result);
 
         DAO manager = new DAO();
         List<Movie> mv = manager.getMovie();
@@ -18,6 +26,7 @@ public class Main {
             System.out.println("2. 영화목록 출력");
             System.out.println("3. 영화정보 검색");
             System.out.println("4. 영화정보 삭제");
+            System.out.println("5. 영화정보 수정");
             System.out.println("0. 종료");
             int sel = Integer.parseInt(sc.nextLine());
             switch (sel) {
@@ -25,25 +34,29 @@ public class Main {
                     int id;
                     String title;
                     String genre;
+                    String dateformat;
                     System.out.print("등록할 ID >>");
                     id = Integer.parseInt(sc.nextLine());
                     System.out.print("등록할 영화 이름 >>");
                     title = sc.nextLine();
-                    System.out.print("등록할 열화 장르 >>");
+                    System.out.print("등록할 영화 장르 >>");
                     genre = sc.nextLine();
-                    manager.addMovie(new Movie(id, title, genre));
+                    System.out.print("등록할때 날짜 형식 >>");
+                    dateformat = sc.nextLine();
+                    manager.addMovie(new Movie(id, title, genre,dateformat));
                     break;
                 case 2:
-                    System.out.println("ID\tTitle\tGenre");
-                    for (Movie i : mv) {
+                    System.out.println("ID\tTitle\tGenre\tDate");
+                    /*for (Movie i : mv) {
                         System.out.println(i);
-                    }
-                    /*for(int i=0; i<manager.getMovie().size(); i++)
+                    }*/
+                    for(int i=0; i<manager.getMovie().size(); i++)
                     {
                         System.out.println(manager.getMovie().get(i).getId()+"\t"
                                 +manager.getMovie().get(i).getTitle()+"\t"
-                        +manager.getMovie().get(i).getTitle());
-                    }*/
+                        +manager.getMovie().get(i).getTitle()+"\t"
+                        +manager.getMovie().get(i).getDate());
+                    }
                     break;
                 case 3:
                     String searchTitle = "";
