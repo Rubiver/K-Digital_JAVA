@@ -12,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Main{
+    //입출력 등의 반복적인 행위는 메서드로 묶어서 한번에 처리.
     public static void main(String[] args) throws ParseException {
         Scanner sc = new Scanner(System.in);
         long currentTime = System.currentTimeMillis();
@@ -64,6 +65,7 @@ public class Main{
                     searchTitle = sc.nextLine();
                     for (int i = 0; i < manager.getMovie().size(); i++) {
                         if (manager.getMovie().get(i).getTitle().equals(searchTitle)) {
+                            //DAO에 영화 제목 검색을 담당하는 메서드를 정의했음. 그거 사용해도 됨.
                             System.out.println("검색한 영화 이름 : "+searchTitle);
                             System.out.println(manager.getMovie().get(i));
                             break;

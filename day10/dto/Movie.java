@@ -8,6 +8,7 @@ public class Movie {
     private int id;
     private String title;
     private String genre;
+    private String regDate;
     private String dateFormat;
 
     public Movie(int id, String title, String genre, String dateformat) {
