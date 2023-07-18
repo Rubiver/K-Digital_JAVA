@@ -40,7 +40,7 @@ public class Server {
                 dataOutputStream.flush();
             }else if(msg.equals("wiseword")){
                 String[] wiseword = new String[]{"신은 죽었다.","빛이 있으라.","보다 먼 곳으로."};
-                int randNum = (int)Math.random()*3+1;
+                int randNum = (int)(Math.random()*3+1);
                 dataOutputStream.writeUTF(wiseword[randNum]);
                 dataOutputStream.flush();
             } else if (msg.equals("exit")) {

@@ -16,7 +16,10 @@ public class Exam01 {
         //  내 컴퓨터에서 상대에게 보낼 때는 OutputStream, 상대로부터 내 컴퓨터로 데이터를 받을 때는 InputStream
 
         //ServerSocket : 접속하는 사용자마다 Socket을 생성해서 하나씩 연결해주는 역할을 수행함.
-        
-        
+        for(int i=0; i< 30; i++)
+        {
+            int randNum = (int)(Math.random()*3+1);
+            System.out.println(randNum);
+        }
     }
 }
