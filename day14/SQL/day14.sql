@@ -46,3 +46,6 @@ select EMP_NAME, datediff(now(),HIRE_DATE) 근속일 from employee;
 
 -- 근속년수가 20년 이상인 직원의 이름 및 직급코드를 출력
 select EMP_NAME, JOB_CODE from employee where datediff(now(),HIRE_DATE)/365 >= 20;
+
+-- employee 테이블에서 이름, 연봉, 총수령액(보너스 포함)을 출력
+select  EMP_NAME, SALARY*12, SALARY+(SALARY*BONUS) from employee;
